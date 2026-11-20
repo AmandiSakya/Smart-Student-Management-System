@@ -202,7 +202,7 @@ backend/
 | DAO | `StudentFeeDAO` | Database operations for student fees and balances |
 | Model | `PaymentSlip`, `StudentFee` | Data structures for slips and fees |
 
-> Authentication (JWT, security config) is shared across the system and handled by other team members. Add your frontend folder here once you decide how it is laid out.
+> Authentication (JWT, security config) is shared across the system and handled by other team members. 
 
 ---
 
@@ -240,22 +240,22 @@ status      = PAID if amount_due == 0, otherwise PENDING
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/<your-username>/school-payment-management.git
-   cd school-payment-management
+   git clone https://github.com/AmandiSakya/smart-student-management-system.git
+   cd smart-student-management-system
    ```
 
 2. **Create the database**
    ```bash
-   mysql -u root -p < database/payment.sql
+   mysql -u root -p < db/payment.sql
    ```
 
 3. **Configure the database connection**
 
-   Update the connection settings (e.g. in `application.properties` or your DB utility class):
+   Update the connection settings :
    ```properties
-   db.url=jdbc:mysql://localhost:3306/<database_name>
-   db.username=<your_username>
-   db.password=<your_password>
+   db.url=jdbc:mysql://localhost:3306/school_lms_db
+   db.username=<username>
+   db.password=<password>
    ```
 
 4. **Configure the upload directory**
@@ -265,12 +265,12 @@ status      = PAID if amount_due == 0, otherwise PENDING
 5. **Build and run**
    ```bash
    mvn clean install
-   mvn spring-boot:run     # or deploy the WAR to Tomcat
+   mvn spring-boot:run   
    ```
 
 6. **Open the app**
 
-   Visit `http://localhost:8080/` in your browser.
+   Visit `http://localhost:5173/` in your browser.
 
 ---
 
