@@ -1,10 +1,8 @@
-# Smart-Student-Management-System
-Payment management module for a School Management System: parents upload payment slips and track paid/pending status and due amounts, while administrators verify slips and update student payment records. Built with Java.
 # School Management System: Payment Management Module
 
 A Java-based web module that computerizes a school's manual fee payment process. Parents can submit payment slips online and track their child's payment status, while administrators verify the slips and record approved payments in the school database.
 
-This repository contains **only the payment management component** of a 5-member group project (SE2012). It was designed and developed by me as part of the larger School Management System.
+This repository contains **only the payment management component** of a 5-member group project (SE2012-Object-Oriented Analysis and Design | Y2S1 | final project). It was designed and developed by me as part of the larger School Management System.
 
 ---
 
@@ -53,10 +51,17 @@ This repository contains **only the payment management component** of a 5-member
 
 ## Tech Stack
 
-> Update this section to match what you actually used.
-
 | Layer | Technology |
 |-------|------------|
+| Backend | Java, Spring Boot (REST API) |
+| Security | Spring Security, JWT authentication |
+| Frontend | HTML, CSS, JavaScript (update with your framework, e.g. React) |
+| Database | MySQL (JDBC DAOs and Spring Data repositories) |
+| Build tool | Maven |
+| IDE | IntelliJ IDEA |
+| Version control | Git & GitHub |
+
+-------|------------|
 | Backend | Java (e.g. Servlets / Spring Boot) |
 | Frontend | HTML, CSS, JavaScript (e.g. JSP / Thymeleaf) |
 | Database | MySQL |
@@ -68,29 +73,136 @@ This repository contains **only the payment management component** of a 5-member
 
 ## Project Structure
 
-> Replace with your real folder layout. Example:
+### Full project structure (entire School Management System)
+
+The complete system is built by the whole team. This is the overall layout of the backend:
 
 ```
-payment-management/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/school/payment/
-│   │   │       ├── controller/     # Request handling (parent & admin)
-│   │   │       ├── service/        # Business logic (balance calculation, approval)
-│   │   │       ├── dao/            # Database access
-│   │   │       ├── model/          # Payment, PaymentSlip, Fee entities
-│   │   │       └── util/           # DB connection, file upload helpers
-│   │   ├── resources/
-│   │   └── webapp/
-│   │       ├── css/                # Red & white theme styles
-│   │       ├── js/
-│   │       └── pages/              # Parent and admin pages
-├── database/
-│   └── payment.sql                 # Schema script
-├── uploads/                        # Stored payment slips (git-ignored)
-└── README.md
+smart-student-management-system/
+└── backend/
+    ├── db/                                  # Database scripts
+    ├── src/
+    │   ├── main/
+    │   │   ├── java/
+    │   │   │   ├── com.studentmanagement.backend/
+    │   │   │   │   ├── config/
+    │   │   │   │   │   ├── DatabaseConnection
+    │   │   │   │   │   ├── JwtAuthFilter
+    │   │   │   │   │   ├── JwtUtil
+    │   │   │   │   │   └── SecurityConfig
+    │   │   │   │   ├── controller/
+    │   │   │   │   │   ├── AcademicStaffController
+    │   │   │   │   │   ├── AttendanceController
+    │   │   │   │   │   ├── AuthController
+    │   │   │   │   │   ├── ClassScheduleController
+    │   │   │   │   │   ├── LeaveRequestController
+    │   │   │   │   │   ├── PaymentController
+    │   │   │   │   │   ├── StudentController
+    │   │   │   │   │   ├── SubjectController
+    │   │   │   │   │   ├── UserManagementController
+    │   │   │   │   │   └── UserManagementExceptionHandler
+    │   │   │   │   ├── dao/
+    │   │   │   │   │   ├── AcademicStaffDAO
+    │   │   │   │   │   ├── PaymentSlipDAO
+    │   │   │   │   │   └── StudentFeeDAO
+    │   │   │   │   ├── dto/
+    │   │   │   │   │   ├── AttendanceSummaryResponse
+    │   │   │   │   │   ├── ChangePasswordRequest
+    │   │   │   │   │   ├── CreateUserRequest
+    │   │   │   │   │   ├── LeaveSummaryDTO
+    │   │   │   │   │   ├── UpdateProfileRequest
+    │   │   │   │   │   └── WeeklyAttendanceRequest
+    │   │   │   │   ├── entity/
+    │   │   │   │   │   ├── ClassSchedule
+    │   │   │   │   │   ├── LeaveBalance
+    │   │   │   │   │   ├── LeaveRequest
+    │   │   │   │   │   ├── Staff
+    │   │   │   │   │   └── Subject
+    │   │   │   │   ├── exception/
+    │   │   │   │   │   └── GlobalExceptionHandler
+    │   │   │   │   ├── model/
+    │   │   │   │   │   ├── Attendance
+    │   │   │   │   │   ├── AttendanceStaff
+    │   │   │   │   │   ├── AttendanceSummary
+    │   │   │   │   │   ├── PaymentSlip
+    │   │   │   │   │   ├── RevokedToken
+    │   │   │   │   │   ├── Role
+    │   │   │   │   │   ├── Salary
+    │   │   │   │   │   ├── SalaryCalculation
+    │   │   │   │   │   ├── SalarySummary
+    │   │   │   │   │   ├── Staff
+    │   │   │   │   │   ├── Student
+    │   │   │   │   │   ├── StudentFee
+    │   │   │   │   │   └── User
+    │   │   │   │   ├── repository/
+    │   │   │   │   │   ├── AttendanceRepository
+    │   │   │   │   │   ├── AttendanceSummaryRepository
+    │   │   │   │   │   ├── ClassScheduleRepository
+    │   │   │   │   │   ├── LeaveBalanceRepository
+    │   │   │   │   │   ├── LeaveRequestRepository
+    │   │   │   │   │   ├── RevokedTokenRepository
+    │   │   │   │   │   ├── RoleRepository
+    │   │   │   │   │   ├── StaffRepository
+    │   │   │   │   │   ├── StudentRepository
+    │   │   │   │   │   ├── SubjectRepository
+    │   │   │   │   │   └── UserRepository
+    │   │   │   │   ├── scheduler/
+    │   │   │   │   │   └── MonthlyAttendanceScheduler
+    │   │   │   │   ├── service/
+    │   │   │   │   │   ├── AcademicStaffService
+    │   │   │   │   │   ├── AttendanceService
+    │   │   │   │   │   ├── AuthService
+    │   │   │   │   │   ├── ClassScheduleService
+    │   │   │   │   │   ├── LeaveRequestService
+    │   │   │   │   │   ├── PaymentManagementService
+    │   │   │   │   │   ├── StudentService
+    │   │   │   │   │   ├── SubjectService
+    │   │   │   │   │   ├── TokenBlacklistService
+    │   │   │   │   │   └── UserManagementService
+    │   │   │   │   ├── BackendApplication
+    │   │   │   │   └── requests.http
+    │   │   │   └── AcademicStaffManagement
+    │   │   └── resources/
+    │   │       └── application.properties
+    │   └── test/
+    ├── .gitattributes
+    ├── .gitignore
+    ├── mvnw
+    ├── mvnw.cmd
+    ├── pom.xml
+    └── staff_tables.sql
 ```
+
+### My part: Payment Management
+
+Only the files below belong to the payment management module. They follow the same package layout as the full project, so they drop straight into it.
+
+```
+backend/
+└── src/main/java/com/studentmanagement/backend/
+    ├── config/
+    │   └── DatabaseConnection              # Shared DB connection used by the DAOs
+    ├── controller/
+    │   └── PaymentController               # REST endpoints for parents and admins
+    ├── dao/
+    │   ├── PaymentSlipDAO                  # Save, fetch and update payment slips
+    │   └── StudentFeeDAO                   # Fee totals, amount paid and amount due
+    ├── model/
+    │   ├── PaymentSlip                     # Uploaded slip (status, amount, file path)
+    │   └── StudentFee                      # Student fee and payment balance
+    └── service/
+        └── PaymentManagementService        # Business logic: slip approval, status calculation
+```
+
+| Layer | File | Responsibility |
+|-------|------|----------------|
+| Controller | `PaymentController` | Parent: submit slips, view status and history. Admin: review, approve or reject slips |
+| Service | `PaymentManagementService` | Calculates paid / pending status and due amount, handles approval workflow |
+| DAO | `PaymentSlipDAO` | Database operations for payment slips |
+| DAO | `StudentFeeDAO` | Database operations for student fees and balances |
+| Model | `PaymentSlip`, `StudentFee` | Data structures for slips and fees |
+
+> Authentication (JWT, security config) is shared across the system and handled by other team members. Add your frontend folder here once you decide how it is laid out.
 
 ---
 
@@ -191,6 +303,8 @@ The interface uses a **red and white** theme to match the rest of the School Man
 
 ## Screenshots
 
+> Add screenshots here once the UI is ready.
+
 | Parent: Payment Status | Parent: Slip Upload | Admin: Slip Review |
 |---|---|---|
 | ![Payment status](docs/screenshots/payment-status.png) | ![Slip upload](docs/screenshots/slip-upload.png) | ![Slip review](docs/screenshots/slip-review.png) |
@@ -209,7 +323,7 @@ The interface uses a **red and white** theme to match the rest of the School Man
 
 ## Author
 
-**<Your Name>**
+**Amandi Sakya**
 Payment Management Module, School Management System (SE2012 Group Project)
 
 GitHub: [@AmandiSakya](https://github.com/AmandiSakya)
