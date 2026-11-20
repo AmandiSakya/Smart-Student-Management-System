@@ -191,8 +191,6 @@ The interface uses a **red and white** theme to match the rest of the School Man
 
 ## Screenshots
 
-> Add screenshots here once the UI is ready.
-
 | Parent: Payment Status | Parent: Slip Upload | Admin: Slip Review |
 |---|---|---|
 | ![Payment status](docs/screenshots/payment-status.png) | ![Slip upload](docs/screenshots/slip-upload.png) | ![Slip review](docs/screenshots/slip-review.png) |
@@ -214,4 +212,4 @@ The interface uses a **red and white** theme to match the rest of the School Man
 **<Your Name>**
 Payment Management Module, School Management System (SE2012 Group Project)
 
-GitHub: [@your-username](https://github.com/your-username)
+GitHub: [@AmandiSakya](https://github.com/AmandiSakya)
