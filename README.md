@@ -303,6 +303,8 @@ The interface uses a **red and white** theme to match the rest of the School Man
 
 ## Screenshots
 
+Front Page: 
+<p align="center"> <img src="front-page-of-website(1).png" alt="front-page-of-website(1)" width="45%"> <img src="front-page-of-website(2).png" alt="front-page-of-website(2)" width="45%"> <img src="front-page-of-website(3).png" alt="front-page-of-website(3)" width="45%"> <img src="front-page-of-website(4).png" alt="front-page-of-website(4)" width="45%"> </p>
 Parent: Payment Status
 <p align="center"> <img src="docs/screenshots/payment-status-1.png" alt="Payment status overview" width="45%"> <img src="docs/screenshots/payment-status-2.png" alt="Pending payment with amount paid and due" width="45%"> </p>
 Parent: Slip Upload
