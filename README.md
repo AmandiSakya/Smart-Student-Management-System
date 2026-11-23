@@ -62,10 +62,10 @@ This repository contains **only the payment management component** of a 5-member
 | Version control | Git & GitHub |
 
 -------|------------|
-| Backend | Java (e.g. Servlets / Spring Boot) |
-| Frontend | HTML, CSS, JavaScript (e.g. JSP / Thymeleaf) |
+| Backend | Java (Spring Boot) |
+| Frontend |JavaScript |
 | Database | MySQL |
-| Build tool | Maven / Gradle |
+| Build tool | Maven |
 | IDE | IntelliJ IDEA |
 | Version control | Git & GitHub |
 
@@ -317,10 +317,8 @@ Admin: Slip Review
 ## Future Improvements
 
 - Email or SMS notifications when a slip is approved or rejected
-- Downloadable payment receipts (PDF)
 - Online payment gateway integration
 - Payment reports and analytics for administrators
-- Installment plans and late-fee handling
 
 ---
 
