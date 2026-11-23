@@ -303,9 +303,12 @@ The interface uses a **red and white** theme to match the rest of the School Man
 
 ## Screenshots
 
-| Parent: Payment Status | Parent: Slip Upload | Admin: Slip Review |
-|---|---|---|
-| ![Payment status](docs/screenshots/payment-status.png) | ![Slip upload](docs/screenshots/slip-upload.png) | ![Slip review](admin-slip-review(1).png)(admin-slip-review(2).png) |
+Parent: Payment Status
+<p align="center"> <img src="docs/screenshots/payment-status-1.png" alt="Payment status overview" width="45%"> <img src="docs/screenshots/payment-status-2.png" alt="Pending payment with amount paid and due" width="45%"> </p>
+Parent: Slip Upload
+<p align="center"> <img src="docs/screenshots/slip-upload-1.png" alt="Slip upload form" width="45%"> <img src="docs/screenshots/slip-upload-2.png" alt="Slip upload success message" width="45%"> </p>
+Admin: Slip Review
+<p align="center"> <img src="docs/screenshots/slip-review-1.png" alt="Pending slips list" width="45%"> <img src="docs/screenshots/slip-review-2.png" alt="Slip review with approve and reject buttons" width="45%"> </p>
 
 ---
 
