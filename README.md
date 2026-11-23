@@ -306,9 +306,9 @@ The interface uses a **red and white** theme to match the rest of the School Man
 Front Page: 
 <p align="center"> <img src="front-page-of-website(1).png" alt="front-page-of-website(1)" width="45%"> <img src="front-page-of-website(2).png" alt="front-page-of-website(2)" width="45%"> <img src="front-page-of-website(3).png" alt="front-page-of-website(3)" width="45%"> <img src="front-page-of-website(4).png" alt="front-page-of-website(4)" width="45%"> </p>
 Parent: Payment Status
-<p align="center"> <img src="docs/screenshots/payment-status-1.png" alt="Payment status overview" width="45%"> <img src="docs/screenshots/payment-status-2.png" alt="Pending payment with amount paid and due" width="45%"> </p>
+<p align="center"> <img src="payment-status-upload-and-overview(1).png" alt="payment-status-upload-and-overview.png" width="45%"> <img src="docs/screenshots/payment-status-2.png" alt="Pending payment with amount paid and due" width="45%"> </p>
 Parent: Slip Upload
-<p align="center"> <img src="docs/screenshots/slip-upload-1.png" alt="Slip upload form" width="45%"> <img src="docs/screenshots/slip-upload-2.png" alt="Slip upload success message" width="45%"> </p>
+<p align="center"> <img src="docs/screenshots/slip-upload-1.png" alt="Slip upload form" width="45%"> <img src="payment-status-upload-and-overview(2).png" alt="payment-status-upload-and-overview" width="45%"> </p>
 Admin: Slip Review
 <p align="center"> <img src="admin-slip-review(1).png" alt="admin-slip-review(1)" width="45%"> <img src="admin-slip-review(2).png" alt="admin-slip-review(2)" width="45%"> </p>
 
