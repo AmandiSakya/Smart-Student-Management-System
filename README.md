@@ -308,7 +308,7 @@ Parent: Payment Status
 Parent: Slip Upload
 <p align="center"> <img src="docs/screenshots/slip-upload-1.png" alt="Slip upload form" width="45%"> <img src="docs/screenshots/slip-upload-2.png" alt="Slip upload success message" width="45%"> </p>
 Admin: Slip Review
-<p align="center"> <img src="docs/screenshots/slip-review-1.png" alt="Pending slips list" width="45%"> <img src="docs/screenshots/slip-review-2.png" alt="Slip review with approve and reject buttons" width="45%"> </p>
+<p align="center"> <img src="admin-slip-review(1).png" alt="admin-slip-review(1)" width="45%"> <img src="docs/screenshots/slip-review-2.png" alt="Slip review with approve and reject buttons" width="45%"> </p>
 
 ---
 
